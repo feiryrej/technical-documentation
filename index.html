@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Java Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Java Documentation</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction"> Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#What_you_should_already_know"> What you should already know</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#JavaScript_and_Java"> JavaScript and Java</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Hello_World"> Hello World</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variables"> Variables</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Steps in getting started</p>
+            <ol>
+                <li>Download Java</li>
+                <li>Download Java SDK</li>
+                <li>Get an Integrated Development Environment</li>
+                <li>Start a project within the IDE</li>
+                <li>Code up "Hello World" and run it</li>
+            </ol>
+            <p>Setting up your development environment is an essential first step to begin coding in Java.</p>
+        </section>
+        
+        <section class="main-section" id="What_you_should_already_know">
+            <header>What you should already know</header>
+            <p>This guide assumes you have the following basic background:</p>
+            <ul>
+                <li>A general understanding of the Internet and the World Wide Web (WWW)</li>
+                <li>Good working knowledge of HyperText Markup Language (HTML)</li>
+                <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript</li>
+            </ul>
+            <p>Having a solid foundation in web technologies will make learning Java smoother.</p>
+        </section>
+        
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>JavaScript and Java are similar in some ways but fundamentally different in some others.</p>
+            <p>The JavaScript language resembles Java but does not have Java's static typing and strong type checking.</p>
+            <p>JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+            <img src="java.png" alt="java-method-img" class="image">
+        </section>
+        
+        <section class="main-section" id="Hello_World">
+            <header>Hello World</header>
+            <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
+            <pre>
+                <code>
+                    function greetMe(yourName) { alert("Hello " + yourName); }
+                    <br>greetMe("World");
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    public class HelloWorld {
+                        public static void main(String[] args) {
+                            System.out.println("Hello, world!");
+                        }
+                    }
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    public class Factorial {
+                        public static int calculateFactorial(int n) {
+                            if (n <= 1) {
+                                return 1;
+                            } else {
+                                return n * calculateFactorial(n - 1);
+                            }
+                        }
+                    
+                        public static void main(String[] args) {
+                            int number = 5;
+                            int factorial = calculateFactorial(number);
+                            System.out.println("Factorial of " + number + " is " + factorial);
+                        }
+                    }
+                    
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    public class ArrayExample {
+                        public static void main(String[] args) {
+                            int[] numbers = { 2, 4, 6, 8, 10 };
+                    
+                            for (int num : numbers) {
+                                System.out.print(num + " ");
+                            }
+                    
+                            System.out.println();
+                    
+                            int sum = 0;
+                            for (int num : numbers) {
+                                sum += num;
+                            }
+                            System.out.println("Sum: " + sum);
+                        }
+                    }
+                    
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    public class ExceptionHandling {
+                        public static void main(String[] args) {
+                            try {
+                                int result = 10 / 0; // This will throw an ArithmeticException
+                                System.out.println("Result: " + result);
+                            } catch (ArithmeticException e) {
+                                System.out.println("An error occurred: " + e.getMessage());
+                            } finally {
+                                System.out.println("This will always execute.");
+                            }
+                        }
+                    }
+                    
+                </code>
+            </pre>
+            <p>The code above defines a function called <code>greetMe</code> that displays an alert with a greeting message.</p>
+        </section>
+        
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+            <p>Variables are used to store and manipulate data in your JavaScript programs.</p>
+        </section>
+        
+        <footer>
+            <p>Documentation brought to you by Regina Bonifacio</p>
+        </footer>
+    </main>
+</body>
+</html>
